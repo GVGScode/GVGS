@@ -467,10 +467,7 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
                     weights = (1.0 / torch.exp(pixel_noise)).detach()
                     weights[~d_mask] = 0
                     
-                    # weights = weights + 0.5 * accT_weights
-                    # weights_centered = (weights - 0.75) * 4  
-                    # weights = torch.sigmoid(weights_centered)  
-                    # beta = 4.0
+                    weights = weights + 0.5 * accT_weights
                 else:
                     d_mask = d_mask
                     weights = torch.ones_like(pixel_noise)
