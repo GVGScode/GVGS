@@ -414,7 +414,7 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
                                             return_plane=True, return_depth_normal=False)
 
                 nearest_infl = nearest_render_pkg['infl']
-                nearest_infl_mask = nearest_infl > 0.01
+                nearest_infl_mask = nearest_infl > 0.0001
                 # print("Selected {} Gaussians from all {} Gaussians".format(nearest_infl_mask.sum(), nearest_infl.shape[0]))
                 
                 accT_masked_pkg = render(
