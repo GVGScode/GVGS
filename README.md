@@ -1,10 +1,15 @@
 # GVGS: Gaussian Visibility-Aware Multi-View Geometry for Accurate Surface Reconstruction
-Anonymous submission.
+
+Accepted to ACM Multimedia 2026 (ACM MM 2026).
 
 <p align="center">
   <img src="assets/teaser.JPG" alt="GVGS Teaser" width="80%">
 </p>
 We propose GVGS, a Gaussian Visibility-Aware Multi-View Geometry for Accurate Surface Reconstruction. GVGS leverages the visibility information from the 3D Gaussian primitives to enhance the multi-view geometry constraints, and achieves state-of-the-art performance on both DTU and Tanks and Temples datasets.
+
+## News
+- [2026-07] GVGS has been accepted to ACM Multimedia 2026 (ACM MM 2026).
+- [2026-01] Code has been released.
 
 ## Results
 The Chamfer Distance↓ on the DTU dataset
@@ -38,9 +43,9 @@ pip install submodules/simple-knn
 
 ## Dataset Preprocess
 ### Data Download
-Please download the preprocessed DTU dataset from [2DGS](https://surfsplatting.github.io/), and download the ground truth point clouds from the [DTU dataset](https://roboimagedata.compute.dtu.dk/?page_id=36). Download the Tanks and Temples dataset preprocessed by [GOF](https://github.com/autonomousvision/gaussian-opacity-fields), and the GT of Tanks and Temples dataset from [official webiste](https://www.tanksandtemples.org/download/). 
+Please download the preprocessed DTU dataset from [2DGS](https://surfsplatting.github.io/), and download the ground truth point clouds from the [DTU dataset](https://roboimagedata.compute.dtu.dk/?page_id=36). Download the Tanks and Temples dataset preprocessed by [GOF](https://github.com/autonomousvision/gaussian-opacity-fields), and the GT of Tanks and Temples dataset from the [official website](https://www.tanksandtemples.org/download/). 
 
-The data folder should like this:
+The data folder should be organized as follows:
 ```shell
 data
 ├── DTU
@@ -112,7 +117,20 @@ python scripts/run_tnt_multi_gpu.py \
     --out_name test 
 ```
 
+## Citation
+If you find this project useful, please cite our paper:
 
+```bibtex
+@misc{su2026gvgsgaussianvisibilityawaremultiview,
+      title={GVGS: Gaussian Visibility-Aware Multi-View Geometry for Accurate Surface Reconstruction}, 
+      author={Mai Su and Qihan Yu and Zhongtao Wang and Yilong Li and Chengwei Pan and Yisong Chen and Guoping Wang and Fei Zhu},
+      year={2026},
+      eprint={2601.20331},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2601.20331}, 
+}
+```
 
 ## Acknowledgements
 This project builds upon [3D Gaussian Splatting (3DGS)](https://github.com/graphdeco-inria/gaussian-splatting) and [PGSR](https://github.com/zju3dv/PGSR).  
